@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://use.fontawesome.com/a4207949f3.js"></script>
+    <style>
+        @import url(http://fonts.googleapis.com/earlyaccess/notosanskannada.css);
+        *{
+            font-family: 'Noto Sans Kannada', sans-serif;
+        }
+        /* css reset */
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+        /* css reset */
+        img{
+            width: 100%;
+            border:0;
+            vertical-align: top;
+        }
+        .full-width{
+            width: 100%;
+        }
+        .fixed-width{
+            width: 1200px;
+            margin:auto;
+        }
+        .primary-color{
+            background-color: brown;
+            color: #fff;
+        }
+        .col-4{
+            width: 280px;
+            margin: 10px;
+            float: left;
+            text-align: center;
+        }
+        .col-4 .icon{
+            color: #000;
+        }
+        .col-4 p{
+            color: burlywood;
+        }
+        .col-4 h3{
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .clearfix::after{
+            content:"";
+            display: block;
+            clear:both;
+        }
+        nav .logo{
+            float: left;
+            width: 150px;
+            height: 150px;
+            background-image: url(img/logo.png);
+        }
+        nav .menu{
+            float:right
+        }
+        nav .menu ul{
+            margin: 0;
+            padding: 0;
+        }
+        nav .menu li{
+            float: left;
+            list-style: none;
+        }
+        nav .menu a{
+            display: block;
+            line-height: 100px;
+            margin-left: 30px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        header{
+            background-image: url(img/bg01.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            padding-top: 250px;
+            padding-bottom: 250px;
+            text-align: center;
+        }
+        header .content h1{
+            font-size: 100px;
+            letter-spacing: 4PX;
+            color: beige;
+        }
+        header .content p{
+            font-size: 36px;
+            letter-spacing: 4PX;
+            color: aliceblue;
+        }
+        #zone1{
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        #zone1 .title{
+            text-align: center;
+            font-size: 120px;
+            padding-bottom: 50px;
+            position: relative;
+        }
+        #zone1 .title::before{
+            content: "W";
+            position: absolute;
+            color: rgba(255, 255, 255, 0.2);
+            display: block;
+            width: 100%;
+            top: -20px;
+            font-size: 160px;
+        }    
+        #zone1 .icon{
+            width: 150px;
+            height: 150px;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: inline-block;
+            line-height: 170px;
+            border-radius: 50%;
+            border: rgba(255, 255, 255, 0.4) 4px solid;
+        }
+        .col-2 {
+            width: 50%;
+            float: left;
+        }
+        #service .col-2{
+            height: 400px;
+        }
+        #service .wrapper:nth-of-type(1) .col-2:nth-of-type(1){
+            background-color: #111;
+            color: #fff;
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 0;
+        }
+/*before物件01與before物件02 合併為此項目*/
+        #service .wrapper .col-2::before {
+            content:"";
+            height: 100%;
+            display: inline-block;
+            vertical-align: middle;
+        }
+/*before物件01
+        }
+        #service .wrapper:nth-of-type(1) .col-2:nth-of-type(1)::before {
+            content:"";
+            height: 100%;
+            display: inline-block;
+            vertical-align: middle;
+        }
+*/
+        #service .wrapper:nth-of-type(1) .col-2:nth-of-type(1) .content{
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 16px;
+            padding-left: 20%;
+            padding-right: 5%;
+        }
+        #service .wrapper:nth-of-type(1) .col-2:nth-of-type(1) .content h3{
+            border-left: #444 10px solid;
+            font-size: 50px;
+            padding-left: 40px;
+            margin-bottom: 20px;
+        }
+        /*More按鈕*/
+        #service .wrapper:nth-of-type(1) .col-2:nth-of-type(1) .content a{
+            
+        }
+        #service .wrapper:nth-of-type(1) .col-2:nth-of-type(2){
+            background-image: url(img/bg02.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        #service .wrapper:nth-of-type(2) .col-2:nth-of-type(1){
+            background-image: url(img/bg03.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        #service .wrapper:nth-of-type(2) .col-2:nth-of-type(2){
+            background-color: #888;
+            color: #fff;
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 0;
+        }
+
+/* before物件02
+        #service .wrapper:nth-of-type(2) .col-2:nth-of-type(2)::before{
+            content:"";
+            height: 100%;
+            display: inline-block;
+            vertical-align: middle;
+        }
+*/
+        #service .wrapper:nth-of-type(2) .col-2:nth-of-type(2) .content{
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="full-width">
+        <div class="fixed-width">
+            <div class="logo"></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="">Menu</a></li>
+                    <li><a href="">Menu</a></li>
+                    <li><a href="">Menu</a></li>
+                    <li><a href="">Menu</a></li>
+                    <li><a href="">Menu</a></li>
+                    <li><a href="">Menu</a></li>
+                    <li><a href="">Menu</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="full-width">
+        <div class="content">
+            <h1>CREATIVE</h1>
+            <P>Love The Moon!</P>
+        </div>
+    </header>
+    <div id="zone1" class="full-width primary-color clearfix">
+        <div class="title">ABOUT</div>
+        <div class="fixed-width">
+            <div class="col-4">
+                <div class="icon"><span class="fa fa-university fa-3x"></span></div>
+                <h3>Design</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis</p>
+            </div>
+            <div class="col-4">
+                <div class="icon"><span class="fa fa-cutlery fa-3x"></span></div>
+                <h3>Feature</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis</p>
+            </div>
+            <div class="col-4">
+                <div class="icon"><span class="fa fa-tachometer fa-3x"></span></div>
+                <h3>Ideas</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis</p>
+            </div>
+            <div class="col-4">
+                <div class="icon"><span class="fa fa-cogs fa-3x"></span></div>
+                <h3>Support</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis</p>
+            </div>
+        </div>
+    </div>
+    <div id="service" class="full-width">
+        <div class="wrapper">
+            <div class="col-2">
+                <div class="content">
+                    <h3>QWER OIUOIY</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae adipisci vero suscipit repellendus iste eos, aspernatur laudantium ipsa obcaecati quos tempore dolorem accusamus et rem quisquam sapiente eum harum voluptatum.
+                    </p>
+                    <a href="#">More...</a>
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <div class="wrapper">
+            <div class="col-2"></div>
+            <div class="col-2">
+                <div class="content">
+                    <h3>QWER OIUOIY</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae adipisci vero suscipit repellendus iste eos, aspernatur laudantium ipsa obcaecati quos tempore dolorem accusamus et rem quisquam sapiente eum harum voluptatum.
+                    </p>
+                    <a href="#">More...</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+</body>
+</html>
